@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170520143230) do
+ActiveRecord::Schema.define(version: 20170521004816) do
 
   create_table "icssls", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 20170520143230) do
     t.string   "state"
     t.integer  "cert_no"
     t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stocks", force: :cascade do |t|
+    t.string   "ticker"
+    t.string   "name"
+    t.decimal  "last_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
