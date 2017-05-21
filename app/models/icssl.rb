@@ -5,7 +5,7 @@ class Icssl < ActiveRecord::Base
   require 'open-uri'
   require 'active_support/core_ext/hash/conversions'
   
-  def self.new_from_lookup()
+  # def self.new_from_lookup()
   
   # doc = Nokogiri::HTML(open("https://www.accessdata.fda.gov/scripts/shellfish/sh/shippers.cfm?country=US&state=NY"))
   file = File.read('ny_icssl.htm')
@@ -161,10 +161,4 @@ class Icssl < ActiveRecord::Base
         puts "Invalid input."
       end
   end
-  
-  
-  
-  
-  # OUTPUT
-  main_menu
 end
