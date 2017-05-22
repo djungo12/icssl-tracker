@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'welcome#index'
   get 'my_list', to: "users#my_list"
+  get 'result', to: "web_scraper#scrape_ny"
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
