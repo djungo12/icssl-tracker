@@ -1,6 +1,6 @@
-class WebScraperController < ApplicationController
+class ShippersController < ApplicationController
   
-  def scrape_ny
+  def ny_list
     require 'open-uri'
     require 'nokogiri'
     
@@ -19,7 +19,7 @@ class WebScraperController < ApplicationController
       end
     end
     
-    render template: 'web_scraper/result'
+    render template: 'shippers/ny_list'
   end
   
   # get total number of dealers
