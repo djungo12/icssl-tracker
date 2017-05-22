@@ -1,5 +1,10 @@
 <h1>NY Shellfish Shippers</h1>
 <h5>CERTIFICATES EXPIRE DECEMBER 31, 2017</h5>
+<p>There are <%= get_total %> dealers total.</p>
+<p>There are <%= get_aqua %> dealers with aquaculture permit.</p>
+<p>There are <%= get_dshipper %> dealers with D-Shipper permit.</p>
+<p>There are <%= get_rfh %> dealers with wet storage permit.</p>
+<p>There are <%= get_rfh %> dealers who can receive from diggers.</p>
 <div>
   <table class="table table-striped">
     <thead>
@@ -13,18 +18,14 @@
     </thead>
     <tbody>    
       <tr>
-        <% count = 1 %>
         <% @rows.each do |row| %>
         <td><%= "#{row.values[0]}" %></td>
         <td><%= "#{row.values[1]}" %></td>
         <td><%= "#{row.values[2]}" %></td> 
         <td><%= "#{row.values[3]}" %></td> 
         <td><%= "#{row.values[4]}" %></td>
-        <% count +=1 %>
       </tr>
-    <%  end %>
+        <%  end %>
     </tbody>
-    <p>There are <%= "#{count}" %> dealers total.</p>
-
   </table>
 </div>
