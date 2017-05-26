@@ -1,6 +1,6 @@
 class ShippersController < ApplicationController
   
-  def ny_list
+  def main
     require 'open-uri'
     require 'nokogiri'
     
@@ -19,7 +19,7 @@ class ShippersController < ApplicationController
       end
     end
     
-    render template: 'shippers/ny_list'
+    render template: 'shippers/main'
   end
   
   # get total number of dealers
@@ -50,7 +50,6 @@ class ShippersController < ApplicationController
     count = 1
     @rows.each do |row|
       if row.values[3].to_s.length > 3
-        puts "#{count}. #{row.values[0]}"
         count +=1
       end
     end

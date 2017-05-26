@@ -1,3 +1,22 @@
-<h1>Welcome to the ICSSL Tracker</h1>
 
-<%= link_to "logout", destroy_user_session_path, method: :delete =%>
+
+<div class="jumbotron">
+  <a name="about"></a> 
+  <h1>Interactive ICSSL</h1>
+  <p><b>This website renders <abbr title="Interstate Certified Shellfish Shippers List">ICSSL</abbr> in more user-friendly format<span lang="ko">,</span> which allows searching and sorting of shippers by name & 
+    <span lang="ko">certification</span> number. This website should be used as a <em>guide</em>. Please visit FDA's official ICSSL for the most accurate information.</p>
+  <p>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="popover" 
+      data-content="Interstate Certified Shellfish Shippers List is published by the FDA 
+      The shippers listed have been certified by regulatory authorities under the requirements of 
+      National Shellfish Sanitation Program. ">
+    <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> What is ICSSL?</button>
+    <a class="btn btn-lg btn-success" href="http://www.fda.gov/Food/GuidanceRegulation/FederalStateFoodPrograms/ucm2006753.htm" target="_blank" role="button">
+    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Visit Official ICSSL</a>
+  </p>
+</div>
+
+<div class="alert alert-warning" role="alert">
+  <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span><strong>Last Update 2/6/16 11:48pm</strong>
+</div>

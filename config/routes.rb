@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'my_list', to: "users#my_list"
   get 'shippers', to: "shippers#main"
   get 'ny_list', to: "shippers#ny_list"
+  get 'about', to: "welcome#about"
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

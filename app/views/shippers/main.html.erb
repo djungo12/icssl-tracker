@@ -1,1 +1,39 @@
-<h1>Main Page of ICSSL</h1>
+<h1>NY Shellfish Shippers</h1>
+<h5>CERTIFICATES EXPIRE DECEMBER 31, 2017</h5>
+<div>
+  <div class="btn-group btn-group-justified">
+    <a href="icssl_ny.html" class="btn btn-primary">NY</a>
+    <a href="icssl_nj.html" class="btn btn-primary">NJ</a>
+    <a href="icssl_ct.html" class="btn btn-primary">CT</a>
+    <a href="icssl_ma.html" class="btn btn-primary">MA</a>
+  </div>
+
+  <p>There are <%= get_total %> dealers total.</p>
+  <p>There are <%= get_aqua %> dealers with aquaculture permit.</p>
+  <p>There are <%= get_dshipper %> dealers with D-Shipper permit.</p>
+  <p>There are <%= get_ws %> dealers with wet storage permit.</p>
+  <p>There are <%= get_rfh %> dealers who can receive from diggers.</p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>State</th> 
+        <th>Cert. #</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>    
+      <tr>
+        <% @rows.each do |row| %>
+        <td><%= "#{row.values[0]}" %></td>
+        <td><%= "#{row.values[1]}" %></td>
+        <td><%= "#{row.values[2]}" %></td> 
+        <td><%= "#{row.values[3]}" %></td> 
+        <td><%= "#{row.values[4]}" %></td>
+      </tr>
+        <%  end %>
+    </tbody>
+  </table>
+</div>
